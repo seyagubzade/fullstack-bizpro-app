@@ -1,0 +1,74 @@
+#about-us {
+    .theme-title {
+        text-align: center;
+        margin: 95px 0 0 0;
+        h2 {
+            font-size: 36px;
+            color: #292929;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: relative;
+            &:before {
+                content: "";
+                width: 25px;
+                height: 3px;
+                position: absolute;
+                bottom: -25px;
+                left: 50%;
+                margin-left: -12px;
+                background: #d73e4d;
+            }
+        }
+        p {
+            width: 95%;
+            font-size: 16px;
+            min-width: 75%;
+            margin: 60px auto 0 auto;
+        }
+    }
+    .single-about-content {
+        text-align: center;
+        margin-top: 55px;
+        margin-bottom: 100px;
+    }
+    .icon {
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+        line-height: 130px;
+        border-width: 2px;
+        font-size: 36px;
+        color: #292929;
+        border-color: #d73e4d;
+        border-style: solid;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+    }
+    h5 {
+        font-size: 22px;
+        color: #292929;
+        text-transform: uppercase;
+        font-weight: 700;
+        a {
+            color: #292929;
+            margin: 35px 0 20px 0;
+            display: inline-block;
+        }
+    }
+    a.more {
+        width: 130px;
+        line-height: 45px;
+        color: #292929;
+        border-width: 1px;
+        margin-top: 22px;
+        border-color: #d73e4d;
+        border-style: solid;
+        text-decoration: none;
+        outline: none;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    p {
+        line-height: 26px;
+    }
+}

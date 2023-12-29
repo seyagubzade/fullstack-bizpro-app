@@ -1,0 +1,49 @@
+#team-section {
+    .theme-title {
+        text-align: center;
+        margin: 95px 0 0 0;
+        h2 {
+            font-size: 36px;
+            color: #292929;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: relative;
+            &:before {
+                content: "";
+                width: 25px;
+                height: 3px;
+                position: absolute;
+                bottom: -25px;
+                left: 50%;
+                margin-left: -12px;
+                background: #d73e4d;
+            }
+        }
+        p {
+            width: 95%;
+            font-size: 16px;
+            min-width: 75%;
+            margin: 60px auto 0 auto;
+        }
+    }
+    .team-member-wrapper {
+        margin: 60px 0 0 0;
+        display: flex;
+        .float-left {
+            width: 33.333333333%;
+            padding: 0 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .single-team-member{
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            .img {
+                overflow: hidden;
+                position: relative;
+                text-align: center;
+            }
+        }
+    }
+}

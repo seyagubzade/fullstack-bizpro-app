@@ -13,7 +13,7 @@ const TeamList = () => {
             ever since the 1500s, when an unknown printer took a galley of type.
           </p>
         </div>
-        <div className="clear-fix team-member-wrapper">
+        <div className="clear-fix team-member-wrapper row">
           <div className="float-left">
             <div className="single-team-member">
               <div className="img">
@@ -30,35 +30,13 @@ const TeamList = () => {
               <div className="member-name">
                 <h6>Gonzalez Gina</h6>
                 <p>Web Developer</p>
-                <ul>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-pinterest" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
           <div className="float-left">
             <div className="single-team-member">
               <div className="img">
-                <img src="https://preview.colorlib.com/theme/bizpro/images/team/1.jpg" alt="Image" />
+                <img src="https://preview.colorlib.com/theme/bizpro/images/team/2.jpg" alt="Image" />
                 <div className="opacity tran4s">
                   <h4>Gonzalez Gina</h4>
                   <span>Web Developer</span>
@@ -71,35 +49,13 @@ const TeamList = () => {
               <div className="member-name">
                 <h6>Gonzalez Gina</h6>
                 <p>Web Developer</p>
-                <ul>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-pinterest" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
           <div className="float-left">
             <div className="single-team-member">
               <div className="img">
-                <img src="https://preview.colorlib.com/theme/bizpro/images/team/1.jpg" alt="Image" />
+                <img src="https://preview.colorlib.com/theme/bizpro/images/team/3.jpg" alt="Image" />
                 <div className="opacity tran4s">
                   <h4>Gonzalez Gina</h4>
                   <span>Web Developer</span>
@@ -112,28 +68,6 @@ const TeamList = () => {
               <div className="member-name">
                 <h6>Gonzalez Gina</h6>
                 <p>Web Developer</p>
-                <ul>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-pinterest" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="tran3s round-border">
-                      <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>

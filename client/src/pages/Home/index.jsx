@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import SliderHero from '../../components/SliderHero'
 import About from '../../components/About'
 import TeamList from '../../components/TeamList'
+import LatestBlogs from '../../components/LatestBlogs'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
         <SliderHero />
         <About />
         <TeamList />
+        <LatestBlogs />
     </StyledHome>
   )
 }

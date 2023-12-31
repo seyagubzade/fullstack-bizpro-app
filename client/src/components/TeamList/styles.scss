@@ -35,7 +35,7 @@
             overflow: hidden;
             margin-bottom: 30px;
         }
-        .single-team-member{
+        .single-team-member {
             overflow: hidden;
             position: relative;
             text-align: center;
@@ -43,6 +43,37 @@
                 overflow: hidden;
                 position: relative;
                 text-align: center;
+                img{
+                    width: 100%!important;
+                }
+            }
+            .member-name {
+                background: #e6e6e6;
+                overflow: hidden;
+                position: relative;
+                min-height: 70px;
+                h6 {
+                    text-transform: capitalize;
+                    color: #696f78;
+                    margin-top: 12px;
+                }
+                p {
+                    color: #373a3f;
+                    margin: 5px 0 8px 0;
+                }
+            }
+
+            .opacity {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(230, 230, 230, 0.9);
+                padding: 55px 0 20px 0;
+                opacity: 0;
+                transform: scale(1, 0);
+                transform-origin: 0% 0%;
             }
         }
     }

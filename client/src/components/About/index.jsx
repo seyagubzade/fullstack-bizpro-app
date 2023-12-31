@@ -1,7 +1,21 @@
-import React from "react";
-import "./styles.scss"
+import React, { useEffect } from "react";
+import "./styles.scss";
+import { useSelector, useDispatch } from "react-redux";
+import { DeleteProduct, GetAllData } from "../../store/about/api_actions";
+import { Link } from "react-router-dom";
+import toast from 'react-hot-toast';
 
 const About = () => {
+  const dispatch = useDispatch();
+  const { about, loading } = useSelector((state) => state.about);
+
+  const getAll = async () => {
+    dispatch(GetAllData());
+  };
+  useEffect(() => {
+    getAll();
+  }, []);
+
   return (
     <section id="about-us">
       <div className="container">
@@ -14,82 +28,40 @@ const About = () => {
           </p>
         </div>
         <div className="row">
-          <div className="col-lg-3 col-md-3 col-sm-6">
-            <div className="single-about-content">
-              <div className="icon round-border tran3s">
-                <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
-              </div>
-              <h5>
-                <a href="#" className="tran3s">
-                  Web Development
-                </a>
-              </h5>
-              <p>
-                Lorem ipsum dolor sit amet, consect et adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna.
-              </p>
-              <a href="#" className="more tran3s hvr-bounce-to-right">
-                More Details
-              </a>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-3 col-sm-6">
-            <div className="single-about-content">
-              <div className="icon round-border tran3s">
-                <i className="fa fa-camera" aria-hidden="true"></i>
-              </div>
-              <h5>
-                <a href="#" className="tran3s">
-                  PHOTOGRAPHY
-                </a>
-              </h5>
-              <p>
-                Lorem ipsum dolor sit amet, consect et adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna.
-              </p>
-              <a href="#" className="more tran3s hvr-bounce-to-right">
-                More Details
-              </a>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-3 col-sm-6">
-            <div className="single-about-content">
-              <div className="icon round-border tran3s">
-                <i className="fa fa-life-ring" aria-hidden="true"></i>
-              </div>
-              <h5>
-                <a href="#" className="tran3s">
-                  Digital Media
-                </a>
-              </h5>
-              <p>
-                Lorem ipsum dolor sit amet, consect et adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna.
-              </p>
-              <a href="#" className="more tran3s hvr-bounce-to-right">
-                More Details
-              </a>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-3 col-sm-6">
-            <div className="single-about-content">
-              <div className="icon round-border tran3s">
-                <i className="fa fa-line-chart" aria-hidden="true"></i>
-              </div>
-              <h5>
-                <a href="#" className="tran3s">
-                  Online Marketing
-                </a>
-              </h5>
-              <p>
-                Lorem ipsum dolor sit amet, consect et adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna.
-              </p>
-              <a href="#" className="more tran3s hvr-bounce-to-right">
-                More Details
-              </a>
-            </div>
-          </div>
+          {loading ? (
+            <p>Loading</p>
+          ) : about ? (
+            about.map((item, index) => {
+              return (
+                <div className="col-lg-3 col-md-3 col-sm-6">
+                  <div className="single-about-content">
+                    <div className="icon round-border tran3s">
+                      <i className={item.icon} aria-hidden="true"></i>
+                    </div>
+                    <h5>
+                      <a href="#" className="tran3s">
+                        {item.title}
+                      </a>
+                    </h5>
+                    <p>
+                      {item.description}
+                    </p>
+                    <Link to={`/detail/${item._id}`} className="more tran3s hvr-bounce-to-right">
+                      More Details
+                    </Link>
+                    <button className="delete-btn more tran3s hvr-bounce-to-right" onClick={()=>{
+                        dispatch(DeleteProduct(item._id))
+                        toast.success('Item deleted!')
+                    }}>
+                      Delete
+                    </button>
+
+                  </div>
+                </div>
+              );
+            })
+          ) : <p>Not Found</p>}
+         
         </div>
       </div>
     </section>
